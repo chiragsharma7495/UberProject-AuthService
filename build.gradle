@@ -35,6 +35,16 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testAnnotationProcessor 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // JJWT API
+    implementation 'io.jsonwebtoken:jjwt-api:0.13.0'
+
+    // JJWT Implementation (only needed at runtime)
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.13.0'
+
+    // JJWT Jackson JSON parser (only needed at runtime)
+    // Alternatively, you can use 'io.jsonwebtoken:jjwt-gson:0.13.0' or 'io.jsonwebtoken:jjwt-orgjson:0.13.0'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.13.0'
 }
 
 tasks.named('test') {
